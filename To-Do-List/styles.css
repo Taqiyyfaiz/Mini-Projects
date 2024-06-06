@@ -1,0 +1,119 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+.container{
+    width: 100%;
+    min-height: 100vh;
+    padding: 10px;
+    background: #572856;
+    background: -webkit-linear-gradient(0deg, #572856 0%, #a357c9 100%);
+    background: linear-gradient(0deg, #572856 0%, #a357c9 100%);
+}
+.To-Do{
+    width: 100%;
+    max-width: 540px;
+    background: #ffffff;
+    margin: 100px auto 20px;
+    padding: 40px 30px 70px;
+    border-radius: 20px;
+    background: rgba(255,255,255,0.5);
+-webkit-backdrop-filter: blur(19px);
+backdrop-filter: blur(19px);
+border: 1px solid rgba(255,255,255,0.25);
+}
+.To-Do h2{
+    color: #002765;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.To-Do h2 img{
+    width: 30px;
+    margin-left: 10px;
+
+}
+.row{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #edeef0;
+    border-radius: 30px;
+    padding-left: 20px;
+    margin-bottom: 25px;
+}
+input{
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 10px;
+    font-weight: 14px;
+}
+button{
+    border: none;
+    outline: none;
+    padding: 16px 50px;
+    background: #96b9fa;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 40px;
+}
+ul li{
+    list-style: none;
+    font-size: 17px;
+    padding: 12px 8px 12px 50px;
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+}
+ul li::before{
+    content: ' ';
+    position: absolute;
+    height: 28px;
+    width: 28px;
+    border-radius: 50%;
+    background-image: url(Images/unchecked.png);
+    background-size: cover;
+    background-position: center;
+    top: 12px;
+    left: 8px;
+}
+ul li.checked{
+    color: #555;
+    text-decoration: line-through;
+}
+ul li.checked::before{
+    background-image: url(Images/checkd.png);
+}
+ul li span{
+    position: absolute;
+    right: 0;
+    top: 5px;
+    width: 40px;
+    height: 40px;
+    font-size: 22px;
+    color: #555;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 50%;
+}
+ul li span:hover{
+    background: #edeef0;
+}
+html {
+    --s: 104px; /* control the size*/
+    --c1: #3874ff;
+    --c2: #00d5ff;
+    --c3: #ffffff;
+    
+    --_g: conic-gradient(at 50% 25%,#0000 75%,var(--c1) 0);
+    background:
+      var(--_g),var(--_g) var(--s) var(--s),
+      var(--_g) calc(2*var(--s)) calc(2*var(--s)),
+      var(--_g) calc(3*var(--s)) calc(3*var(--s)),
+      repeating-linear-gradient(135deg,var(--c2) 0 12.5%,var(--c3) 0 25%);
+    background-size: calc(4*var(--s)) calc(4*var(--s))
+  }
